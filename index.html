@@ -37,11 +37,11 @@ to all FSharp.Core functions for List, Array, Array2D, Array3D, Seq, Event and O
 
 <div class="row">
   <div class="span1"></div>
-  <div class="span6">
+  <div class="span8">
     <div class="well well-small" id="nuget">
       The FSharp.Core.Fluent library can be installed from NuGet:
       <pre>PM> Install-Package FSharp.Core.Fluent-3.1 (F# 3.1)
-PM> Install-Package FSharp.Core.Fluent-4.0 (F# 4.0)</pre>
+PM> Install-Package FSharp.Core.Fluent-4.0 (coming at F# 4.0 RTM!)</pre>
     </div>
   </div>
   <div class="span1"></div>
@@ -66,13 +66,13 @@ PM> Install-Package FSharp.Core.Fluent-4.0 (F# 4.0)</pre>
 <span class="prep">#r</span> <span class="s">&quot;../../bin/3.1/FSharp.Core.Fluent-3.1.dll&quot;</span>
 <span class="prep">#r</span> <span class="s">&quot;System.Runtime&quot;</span> <span class="c">// in scripts you must also reference this DLL because you are using a portable component</span>
 
-<span class="k">let</span> <span class="i">xs</span> <span class="o">=</span> [ <span class="n">1</span> <span class="o">..</span> <span class="n">10</span> ]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">xs</span> <span class="o">=</span> [ <span class="n">1</span> <span class="o">..</span> <span class="n">10</span> ]
 
-<span class="i">xs</span><span class="o">.</span><span class="i">map</span>(<span class="k">fun</span> <span class="i">x</span> <span class="k">-&gt;</span> <span class="i">x</span> <span class="o">+</span> <span class="n">1</span>)<span class="o">.</span><span class="i">filter</span>(<span class="k">fun</span> <span class="i">x</span> <span class="k">-&gt;</span> <span class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)<span class="o">.</span><span class="i">sort</span>()
+<span onmouseout="hideTip(event, 'fs1', 2)" onmouseover="showTip(event, 'fs1', 2)" class="i">xs</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 3)" onmouseover="showTip(event, 'fs2', 3)" class="f">map</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 5)" onmouseover="showTip(event, 'fs3', 5)" class="i">x</span> <span class="o">+</span> <span class="n">1</span>)<span class="o">.</span><span class="f">filter</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 6)" onmouseover="showTip(event, 'fs3', 6)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 7)" onmouseover="showTip(event, 'fs3', 7)" class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)<span class="o">.</span><span class="f">sort</span>()
 
-<span class="i">xs</span><span class="o">.</span><span class="i">map</span>(<span class="k">fun</span> <span class="i">x</span> <span class="k">-&gt;</span> <span class="i">x</span> <span class="o">+</span> <span class="n">1</span>)
-  <span class="o">.</span><span class="i">filter</span>(<span class="k">fun</span> <span class="i">x</span> <span class="k">-&gt;</span> <span class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)
-  <span class="o">.</span><span class="i">sort</span>()
+<span onmouseout="hideTip(event, 'fs1', 8)" onmouseover="showTip(event, 'fs1', 8)" class="i">xs</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 9)" onmouseover="showTip(event, 'fs2', 9)" class="f">map</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 10)" onmouseover="showTip(event, 'fs3', 10)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 11)" onmouseover="showTip(event, 'fs3', 11)" class="i">x</span> <span class="o">+</span> <span class="n">1</span>)
+  <span class="o">.</span><span class="f">filter</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 12)" onmouseover="showTip(event, 'fs3', 12)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 13)" onmouseover="showTip(event, 'fs3', 13)" class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)
+  <span class="o">.</span><span class="f">sort</span>()
 </pre>
 </td>
 </tr>
@@ -97,8 +97,8 @@ composed in pipelines:</p>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="i">xs</span> 
-<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="f">map</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="i">x</span> <span class="o">+</span> <span class="n">1</span>) 
-<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 6)" onmouseover="showTip(event, 'fs4', 6)" class="f">filter</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 7)" onmouseover="showTip(event, 'fs3', 7)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 8)" onmouseover="showTip(event, 'fs3', 8)" class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs4', 14)" onmouseover="showTip(event, 'fs4', 14)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 15)" onmouseover="showTip(event, 'fs5', 15)" class="f">map</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 16)" onmouseover="showTip(event, 'fs3', 16)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 17)" onmouseover="showTip(event, 'fs3', 17)" class="i">x</span> <span class="o">+</span> <span class="n">1</span>) 
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs4', 18)" onmouseover="showTip(event, 'fs4', 18)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 19)" onmouseover="showTip(event, 'fs6', 19)" class="f">filter</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 20)" onmouseover="showTip(event, 'fs3', 20)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 21)" onmouseover="showTip(event, 'fs3', 21)" class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)
 </pre>
 </td>
 </tr>
@@ -119,9 +119,9 @@ you can freely interconvert betweeen</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">xs</span> 
-<span class="o">|&gt;</span> <span class="i">List</span><span class="o">.</span><span class="i">map</span> (<span class="k">fun</span> <span class="i">x</span> <span class="k">-&gt;</span> <span class="i">x</span> <span class="o">+</span> <span class="n">1</span>) 
-<span class="o">|&gt;</span> <span class="i">List</span><span class="o">.</span><span class="i">filter</span> (<span class="k">fun</span> <span class="i">x</span> <span class="k">-&gt;</span> <span class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)
+<span onmouseout="hideTip(event, 'fs1', 22)" onmouseover="showTip(event, 'fs1', 22)" class="i">xs</span> 
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs4', 23)" onmouseover="showTip(event, 'fs4', 23)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 24)" onmouseover="showTip(event, 'fs5', 24)" class="f">map</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 25)" onmouseover="showTip(event, 'fs3', 25)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 26)" onmouseover="showTip(event, 'fs3', 26)" class="i">x</span> <span class="o">+</span> <span class="n">1</span>) 
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs4', 27)" onmouseover="showTip(event, 'fs4', 27)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 28)" onmouseover="showTip(event, 'fs6', 28)" class="f">filter</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 29)" onmouseover="showTip(event, 'fs3', 29)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 30)" onmouseover="showTip(event, 'fs3', 30)" class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)
 </pre>
 </td>
 </tr>
@@ -135,8 +135,8 @@ you can freely interconvert betweeen</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">xs</span><span class="o">.</span><span class="i">map</span>(<span class="k">fun</span> <span class="i">x</span> <span class="k">-&gt;</span> <span class="i">x</span> <span class="o">+</span> <span class="n">1</span>) 
-  <span class="o">.</span><span class="i">filter</span>(<span class="k">fun</span> <span class="i">x</span> <span class="k">-&gt;</span> <span class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)
+<span onmouseout="hideTip(event, 'fs1', 31)" onmouseover="showTip(event, 'fs1', 31)" class="i">xs</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 32)" onmouseover="showTip(event, 'fs2', 32)" class="f">map</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 33)" onmouseover="showTip(event, 'fs3', 33)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 34)" onmouseover="showTip(event, 'fs3', 34)" class="i">x</span> <span class="o">+</span> <span class="n">1</span>) 
+  <span class="o">.</span><span class="f">filter</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 35)" onmouseover="showTip(event, 'fs3', 35)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 36)" onmouseover="showTip(event, 'fs3', 36)" class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)
 </pre>
 </td>
 </tr>
@@ -153,10 +153,10 @@ you can freely interconvert betweeen</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">xs</span>
-  <span class="o">.</span><span class="i">map</span>(<span class="k">fun</span> <span class="i">x</span> <span class="k">-&gt;</span> <span class="i">x</span> <span class="o">+</span> <span class="n">1</span>)
-  <span class="o">|&gt;</span> <span class="i">List</span><span class="o">.</span><span class="i">filter</span>(<span class="k">fun</span> <span class="i">x</span> <span class="k">-&gt;</span> <span class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>) 
-  <span class="o">|&gt;</span> <span class="i">Array</span><span class="o">.</span><span class="i">ofList</span>
+<span onmouseout="hideTip(event, 'fs1', 37)" onmouseover="showTip(event, 'fs1', 37)" class="i">xs</span>
+  <span class="o">.</span><span class="f">map</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 38)" onmouseover="showTip(event, 'fs3', 38)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 39)" onmouseover="showTip(event, 'fs3', 39)" class="i">x</span> <span class="o">+</span> <span class="n">1</span>)
+  <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs4', 40)" onmouseover="showTip(event, 'fs4', 40)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 41)" onmouseover="showTip(event, 'fs6', 41)" class="f">filter</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs3', 42)" onmouseover="showTip(event, 'fs3', 42)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs3', 43)" onmouseover="showTip(event, 'fs3', 43)" class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>) 
+  <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs7', 44)" onmouseover="showTip(event, 'fs7', 44)" class="t">Array</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 45)" onmouseover="showTip(event, 'fs8', 45)" class="f">ofList</span>
   
 </pre>
 </td>
@@ -173,8 +173,8 @@ you can freely interconvert betweeen</p>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="i">xs</span>
-  <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs1', 9)" onmouseover="showTip(event, 'fs1', 9)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 10)" onmouseover="showTip(event, 'fs2', 10)" class="f">map</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs5', 11)" onmouseover="showTip(event, 'fs5', 11)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs5', 12)" onmouseover="showTip(event, 'fs5', 12)" class="i">x</span> <span class="o">+</span> <span class="n">1</span>)
-  <span class="o">.</span><span class="i">filter</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs5', 13)" onmouseover="showTip(event, 'fs5', 13)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs5', 14)" onmouseover="showTip(event, 'fs5', 14)" class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)  <span class="c">// ERROR: The field or constructor &quot;filter&quot; is not defined</span>
+  <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs4', 46)" onmouseover="showTip(event, 'fs4', 46)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 47)" onmouseover="showTip(event, 'fs5', 47)" class="f">map</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs9', 48)" onmouseover="showTip(event, 'fs9', 48)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs9', 49)" onmouseover="showTip(event, 'fs9', 49)" class="i">x</span> <span class="o">+</span> <span class="n">1</span>)
+  <span class="o">.</span><span class="i">filter</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs9', 50)" onmouseover="showTip(event, 'fs9', 50)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs9', 51)" onmouseover="showTip(event, 'fs9', 51)" class="i">x</span> <span class="o">&gt;</span> <span class="n">4</span>)  <span class="c">// ERROR: The field or constructor &quot;filter&quot; is not defined</span>
 </pre>
 </td>
 </tr>
@@ -197,11 +197,15 @@ the project and submit pull requests.</p>
 redistribution for both commercial and non-commercial purposes. For more information see the 
 <a href="https://github.com/fsprojects/FSharp.Core.Fluent/blob/master/LICENSE.txt">License file</a> in the GitHub repository.</p>
 
-<div class="tip" id="fs1">Multiple items<br />module List<br /><br />from Microsoft.FSharp.Collections<br /><br />--------------------<br />type List&lt;&#39;T&gt; =<br />&#160;&#160;| ( [] )<br />&#160;&#160;| ( :: ) of Head: &#39;T * Tail: &#39;T list<br />&#160;&#160;interface IEnumerable<br />&#160;&#160;interface IEnumerable&lt;&#39;T&gt;<br />&#160;&#160;member Head : &#39;T<br />&#160;&#160;member IsEmpty : bool<br />&#160;&#160;member Item : index:int -&gt; &#39;T with get<br />&#160;&#160;member Length : int<br />&#160;&#160;member Tail : &#39;T list<br />&#160;&#160;static member Cons : head:&#39;T * tail:&#39;T list -&gt; &#39;T list<br />&#160;&#160;static member Empty : &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List&lt;_&gt;</div>
-<div class="tip" id="fs2">val map : mapping:(&#39;T -&gt; &#39;U) -&gt; list:&#39;T list -&gt; &#39;U list<br /><br />Full name: Microsoft.FSharp.Collections.List.map</div>
+<div class="tip" id="fs1">val xs : int list<br /><br />Full name: Index.xs</div>
+<div class="tip" id="fs2">member System.Collections.Generic.IEnumerable.map : mapping:(&#39;T -&gt; &#39;U) -&gt; seq&lt;&#39;U&gt;<br />member List.map : mapping:(&#39;T -&gt; &#39;a1) -&gt; &#39;a1 list</div>
 <div class="tip" id="fs3">val x : int</div>
-<div class="tip" id="fs4">val filter : predicate:(&#39;T -&gt; bool) -&gt; list:&#39;T list -&gt; &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List.filter</div>
-<div class="tip" id="fs5">val x : &#39;a (requires member ( + ))</div>
+<div class="tip" id="fs4">Multiple items<br />module List<br /><br />from Microsoft.FSharp.Collections<br /><br />--------------------<br />type List&lt;&#39;T&gt; =<br />&#160;&#160;| ( [] )<br />&#160;&#160;| ( :: ) of Head: &#39;T * Tail: &#39;T list<br />&#160;&#160;interface IEnumerable<br />&#160;&#160;interface IEnumerable&lt;&#39;T&gt;<br />&#160;&#160;member Head : &#39;T<br />&#160;&#160;member IsEmpty : bool<br />&#160;&#160;member Item : index:int -&gt; &#39;T with get<br />&#160;&#160;member Length : int<br />&#160;&#160;member Tail : &#39;T list<br />&#160;&#160;static member Cons : head:&#39;T * tail:&#39;T list -&gt; &#39;T list<br />&#160;&#160;static member Empty : &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List&lt;_&gt;</div>
+<div class="tip" id="fs5">val map : mapping:(&#39;T -&gt; &#39;U) -&gt; list:&#39;T list -&gt; &#39;U list<br /><br />Full name: Microsoft.FSharp.Collections.List.map</div>
+<div class="tip" id="fs6">val filter : predicate:(&#39;T -&gt; bool) -&gt; list:&#39;T list -&gt; &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List.filter</div>
+<div class="tip" id="fs7">module Array<br /><br />from Microsoft.FSharp.Collections</div>
+<div class="tip" id="fs8">val ofList : list:&#39;T list -&gt; &#39;T []<br /><br />Full name: Microsoft.FSharp.Collections.Array.ofList</div>
+<div class="tip" id="fs9">val x : &#39;a (requires member ( + ))</div>
 
         </div>
         <div class="span3">
