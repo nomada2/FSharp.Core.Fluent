@@ -207,7 +207,7 @@ available for Array, these are not shown here.</p>
 <div class="tip" id="fs2">Multiple items<br />val seq : sequence:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Core.Operators.seq<br /><br />--------------------<br />type seq&lt;&#39;T&gt; = System.Collections.Generic.IEnumerable&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.seq&lt;_&gt;</div>
 <div class="tip" id="fs3">val seq2 : seq&lt;int&gt;<br /><br />Full name: Fluent.seq2</div>
 <div class="tip" id="fs4">member System.Collections.Generic.IEnumerable.append : source2:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt;</div>
-<div class="tip" id="fs5">static member SeqExtensions.averageBy : source:seq&lt;&#39;T&gt; * projection:(&#39;T -&gt; &#39;U) -&gt; &#39;U (requires member ( + ) and member DivideByInt and member get_Zero)</div>
+<div class="tip" id="fs5">static member Extensions.averageBy : source:seq&lt;&#39;T&gt; * projection:(&#39;T -&gt; &#39;U) -&gt; &#39;U (requires member ( + ) and member DivideByInt and member get_Zero)</div>
 <div class="tip" id="fs6">val x : int</div>
 <div class="tip" id="fs7">Multiple items<br />val float : value:&#39;T -&gt; float (requires member op_Explicit)<br /><br />Full name: Microsoft.FSharp.Core.Operators.float<br /><br />--------------------<br />type float = System.Double<br /><br />Full name: Microsoft.FSharp.Core.float<br /><br />--------------------<br />type float&lt;&#39;Measure&gt; = float<br /><br />Full name: Microsoft.FSharp.Core.float&lt;_&gt;</div>
 <div class="tip" id="fs8">member System.Collections.Generic.IEnumerable.cache : unit -&gt; seq&lt;&#39;T&gt;</div>
@@ -217,7 +217,7 @@ available for Array, these are not shown here.</p>
 <div class="tip" id="fs12">member System.Collections.Generic.IEnumerable.collect : mapping:(&#39;T -&gt; #seq&lt;&#39;U&gt;) -&gt; seq&lt;&#39;U&gt;</div>
 <div class="tip" id="fs13">val n : int</div>
 <div class="tip" id="fs14">member System.Collections.Generic.IEnumerable.countBy : projection:(&#39;T -&gt; &#39;Key) -&gt; seq&lt;&#39;Key * int&gt; (requires equality)</div>
-<div class="tip" id="fs15">static member SeqExtensions.distinct : source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt; (requires equality)</div>
+<div class="tip" id="fs15">static member Extensions.distinct : source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt; (requires equality)</div>
 <div class="tip" id="fs16">member System.Collections.Generic.IEnumerable.distinctBy : projection:(&#39;T -&gt; &#39;Key) -&gt; seq&lt;&#39;T&gt; (requires equality)</div>
 <div class="tip" id="fs17">member System.Collections.Generic.IEnumerable.exactlyOne : unit -&gt; &#39;T</div>
 <div class="tip" id="fs18">member System.Collections.Generic.IEnumerable.exists : predicate:(&#39;T -&gt; bool) -&gt; bool</div>
@@ -240,10 +240,10 @@ available for Array, these are not shown here.</p>
 <div class="tip" id="fs35">property System.Collections.Generic.IEnumerable.length: int</div>
 <div class="tip" id="fs36">member System.Collections.Generic.IEnumerable.map : mapping:(&#39;T -&gt; &#39;U) -&gt; seq&lt;&#39;U&gt;</div>
 <div class="tip" id="fs37">member System.Collections.Generic.IEnumerable.mapi : mapping:(int -&gt; &#39;T -&gt; &#39;U) -&gt; seq&lt;&#39;U&gt;</div>
-<div class="tip" id="fs38">static member SeqExtensions.max : source:seq&lt;&#39;T&gt; -&gt; &#39;T (requires comparison)</div>
-<div class="tip" id="fs39">static member SeqExtensions.maxBy : source:seq&lt;&#39;T&gt; * projection:(&#39;T -&gt; &#39;U) -&gt; &#39;T (requires comparison)</div>
-<div class="tip" id="fs40">static member SeqExtensions.min : source:seq&lt;&#39;T&gt; -&gt; &#39;T (requires comparison)</div>
-<div class="tip" id="fs41">static member SeqExtensions.minBy : source:seq&lt;&#39;T&gt; * projection:(&#39;T -&gt; &#39;U) -&gt; &#39;T (requires comparison)</div>
+<div class="tip" id="fs38">static member Extensions.max : source:seq&lt;&#39;T&gt; -&gt; &#39;T (requires comparison)</div>
+<div class="tip" id="fs39">static member Extensions.maxBy : source:seq&lt;&#39;T&gt; * projection:(&#39;T -&gt; &#39;U) -&gt; &#39;T (requires comparison)</div>
+<div class="tip" id="fs40">static member Extensions.min : source:seq&lt;&#39;T&gt; -&gt; &#39;T (requires comparison)</div>
+<div class="tip" id="fs41">static member Extensions.minBy : source:seq&lt;&#39;T&gt; * projection:(&#39;T -&gt; &#39;U) -&gt; &#39;T (requires comparison)</div>
 <div class="tip" id="fs42">member System.Collections.Generic.IEnumerable.pairwise : unit -&gt; seq&lt;&#39;T * &#39;T&gt;</div>
 <div class="tip" id="fs43">member System.Collections.Generic.IEnumerable.pick : chooser:(&#39;T -&gt; &#39;U option) -&gt; &#39;U</div>
 <div class="tip" id="fs44">member System.Collections.Generic.IEnumerable.readonly : unit -&gt; seq&lt;&#39;T&gt;</div>
@@ -251,10 +251,10 @@ available for Array, these are not shown here.</p>
 <div class="tip" id="fs46">member System.Collections.Generic.IEnumerable.scan : state:&#39;State * folder:(&#39;State -&gt; &#39;T -&gt; &#39;State) -&gt; seq&lt;&#39;State&gt;</div>
 <div class="tip" id="fs47">member System.Collections.Generic.IEnumerable.skip : count:int -&gt; seq&lt;&#39;T&gt;</div>
 <div class="tip" id="fs48">member System.Collections.Generic.IEnumerable.skipWhile : predicate:(&#39;T -&gt; bool) -&gt; seq&lt;&#39;T&gt;</div>
-<div class="tip" id="fs49">static member SeqExtensions.sort : source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt; (requires comparison)</div>
+<div class="tip" id="fs49">static member Extensions.sort : source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt; (requires comparison)</div>
 <div class="tip" id="fs50">member System.Collections.Generic.IEnumerable.sortBy : projection:(&#39;T -&gt; &#39;Key) -&gt; seq&lt;&#39;T&gt; (requires comparison)</div>
-<div class="tip" id="fs51">static member SeqExtensions.sum : source:seq&lt;&#39;T&gt; -&gt; &#39;T (requires member ( + ) and member get_Zero)</div>
-<div class="tip" id="fs52">static member SeqExtensions.sumBy : source:seq&lt;&#39;T&gt; * projection:(&#39;T -&gt; &#39;U) -&gt; &#39;U (requires member ( + ) and member get_Zero)</div>
+<div class="tip" id="fs51">static member Extensions.sum : source:seq&lt;&#39;T&gt; -&gt; &#39;T (requires member ( + ) and member get_Zero)</div>
+<div class="tip" id="fs52">static member Extensions.sumBy : source:seq&lt;&#39;T&gt; * projection:(&#39;T -&gt; &#39;U) -&gt; &#39;U (requires member ( + ) and member get_Zero)</div>
 <div class="tip" id="fs53">member System.Collections.Generic.IEnumerable.take : count:int -&gt; seq&lt;&#39;T&gt;</div>
 <div class="tip" id="fs54">member System.Collections.Generic.IEnumerable.takeWhile : predicate:(&#39;T -&gt; bool) -&gt; seq&lt;&#39;T&gt;</div>
 <div class="tip" id="fs55">member System.Collections.Generic.IEnumerable.toArray : unit -&gt; &#39;T []</div>
@@ -272,7 +272,8 @@ available for Array, these are not shown here.</p>
             <li class="nav-header">FSharp.Core.Fluent</li>
             <li><a href="/FSharp.Core.Fluent/index.html">Home page</a></li>
             <li class="divider"></li>
-            <li><a href="http://nuget.org/packages/FSharp.Core.Fluent">Get Library via NuGet</a></li>
+		  	<li><a href="http://nuget.org/packages/FSharp.Core.Fluent-3.1">Package on NuGet (F# 3.1)</a></li>
+            <li><a href="http://nuget.org/packages/FSharp.Core.Fluent-4.0">Package on NuGet (F# 4.0)</a></li>
             <li><a href="http://github.com/fsprojects/FSharp.Core.Fluent">Source Code on GitHub</a></li>
             <li><a href="/FSharp.Core.Fluent/license.html">License</a></li>
             <li><a href="/FSharp.Core.Fluent/release-notes.html">Release Notes</a></li>
