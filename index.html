@@ -82,11 +82,14 @@ PM> Install-Package FSharp.Core.Fluent-4.0 (F# 4.0)</pre>
 </tr>
 </table>
 
-<p>Simply reference the appropriate <code>FSharp.Core.Fluent</code>, Members are added for functionality in 
-the corresponding FSharp.Core modules. All members are inlined so there is no runtime dependency on FSharp.Core.Fluent, 
-and statically resolved using extension members, so IDE tools 
-can report strong intellisense and tooltips. No performance loss
-occurs.</p>
+<p>Reference the appropriate package: <a href="http://www.nuget.org/packages/FSharp.Core.Fluent-3.1">FSharp.Core.Fluent-3.1</a> when
+assuming F# 3.1+, and <a href="http://www.nuget.org/packages/FSharp.Core.Fluent-4.0">FSharp.Core.Fluent-4.0</a> when 
+assuming F# 4.0+.  The 4.0 package gives access to additional functions defined in FSharp.Core for F# 4.0.</p>
+
+<p>Members are added for functionality in FSharp.Core modules. All members are inlined so there 
+is no runtime dependency on FSharp.Core.Fluent. All members are extension members and are
+resolved at compile-time. This means IDE tools can report strong intellisense and tooltips and
+no performance loss occurs.</p>
 
 <h2><a name="Comparison-with-non-Fluent-style" class="anchor" href="#Comparison-with-non-Fluent-style">Comparison with non-Fluent style</a></h2>
 
@@ -184,9 +187,9 @@ you can freely interconvert betweeen</p>
 </tr>
 </table>
 
-<p>NOTE: However, in the 
-the case of <code>xs.append(ys)</code>, the result is "<code>xs</code> then <code>ys</code>" - as expected, but 
-different to the pitfall <code>xs |&gt; List.append ys</code>, which is <code>ys</code> then <code>xs</code> due to the way pipelining and currying works.</p>
+<p>As an aside, it is worth noting that in the the case of <code>xs.append(ys)</code>, the result is "<code>xs</code> then <code>ys</code>" - as expected.
+However this is different to the pitfall <code>xs |&gt; List.append ys</code>, which is actually <code>ys</code> then <code>xs</code> due to the way 
+pipelining and currying works.</p>
 
 <h2><a name="Usage-examples" class="anchor" href="#Usage-examples">Usage examples</a></h2>
 
