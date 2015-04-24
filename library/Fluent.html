@@ -101,29 +101,11 @@ available for Array, these are not shown here.</p>
 <span class="l">60: </span>
 <span class="l">61: </span>
 <span class="l">62: </span>
-<span class="l">63: </span>
-<span class="l">64: </span>
-<span class="l">65: </span>
-<span class="l">66: </span>
-<span class="l">67: </span>
-<span class="l">68: </span>
-<span class="l">69: </span>
-<span class="l">70: </span>
-<span class="l">71: </span>
-<span class="l">72: </span>
-<span class="l">73: </span>
-<span class="l">74: </span>
-<span class="l">75: </span>
-<span class="l">76: </span>
-<span class="l">77: </span>
-<span class="l">78: </span>
-<span class="l">79: </span>
-<span class="l">80: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="prep">#r</span> <span class="s">@&quot;../../../bin/3.1/FSharp.Core.Fluent-3.1.dll&quot;</span>
-<span class="prep">#r</span> <span class="s">&quot;System.Runtime&quot;</span> <span class="c">// in scripts you must also reference this DLL because you are using a portable component</span>
+<span class="prep">#r</span> <span class="s">&quot;FSharp.Core.Fluent-3.1.dll&quot;</span>
+<span class="prep">#r</span> <span class="s">&quot;System.Runtime&quot;</span> <span class="c">// you must also reference this </span>
 
 <span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Core</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">Fluent</span>
 
@@ -184,7 +166,34 @@ available for Array, these are not shown here.</p>
 <span onmouseout="hideTip(event, 'fs4', 189)" onmouseover="showTip(event, 'fs4', 189)" class="i">seq1</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs62', 190)" onmouseover="showTip(event, 'fs62', 190)" class="f">windowed</span>(<span class="n">3</span>) 
 <span onmouseout="hideTip(event, 'fs4', 191)" onmouseover="showTip(event, 'fs4', 191)" class="i">seq1</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs63', 192)" onmouseover="showTip(event, 'fs63', 192)" class="f">zip</span>(<span onmouseout="hideTip(event, 'fs6', 193)" onmouseover="showTip(event, 'fs6', 193)" class="i">seq2</span>) 
 <span onmouseout="hideTip(event, 'fs4', 194)" onmouseover="showTip(event, 'fs4', 194)" class="i">seq1</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs64', 195)" onmouseover="showTip(event, 'fs64', 195)" class="f">zip3</span>(<span onmouseout="hideTip(event, 'fs4', 196)" onmouseover="showTip(event, 'fs4', 196)" class="i">seq1</span>,<span onmouseout="hideTip(event, 'fs6', 197)" onmouseover="showTip(event, 'fs6', 197)" class="i">seq2</span>) 
+</pre>
+</td>
+</tr>
+</table>
 
+<p>Additional methods are also available when using the 4.0 package:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+<span class="l">17: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
 <span class="prep">#if</span> <span class="i">FSHARP_CORE_AT_LEAST_4_0</span>
 <span class="inactive">seq1.contains(3)</span><span class="inactive"> </span>
 <span class="inactive">seq1.exceptseq2)</span><span class="inactive"> </span>
